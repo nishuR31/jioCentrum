@@ -11,9 +11,9 @@ function required(name) {
 }
 
 export const env = {
-	routerUrl: required("ROUTER_URL") || "http://192.168.29.1",
-  username: required("ROUTER_USERNAME") || "admin",
-  password: required("ROUTER_PASSWORD") || "Jiocentrum",
+	routerUrl: process.env.ROUTER_URL || "http://192.168.29.1",
+  username: process.env.ROUTER_USERNAME || "admin",
+  password: process.env.ROUTER_PASSWORD || "Jiocentrum",
   devicePage: process.env.DEVICE_PAGE || "/device",
   headless: process.env.HEADLESS !== "false",
   interval: process.env.CHECK_INTERVAL || "*/1 * * * *"
